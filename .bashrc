@@ -34,7 +34,12 @@ PS1='[\u@\h \W]\$ '
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=~/.local/share/flatpak/exports/bin:$PATH
 
-eval "$(starship init bash)"
+if [[ $TERM == "linux" || ! $(tput cols) ]]; then
+    PS1='[\u@\h \W]\$ '
+else
+    export STARSHIP_CONFIG="$HOME/.config/starship.toml"
+    eval "$(starship init bash)"
+fi
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
