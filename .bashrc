@@ -20,11 +20,12 @@ alias makezip='zip'
 alias mkdir="mkdir -p"
 alias cp="cp -r"
 alias rm="rm -rf"
-alias ls='ls --color'
-alias ll='ls -l --color'
-alias lh='ll -h'
+alias ls="ls --color"
+alias ll="ls -l --color"
+alias lh="ll -h"
 alias code="codium"
-alias grep='grep --color=auto'
+alias grep="grep --color=auto"
+alias q="hyprland"
 
 pfetch
 
